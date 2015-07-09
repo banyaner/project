@@ -1,0 +1,23 @@
+doctype html
+html
+   head
+      link(rel='stylesheet',type='text/css',href='css/profile.css')
+      include head.html
+      link(rel='stylesheet',type='text/css',href='css/tool.css')
+      link(rel='stylesheet',type='text/css',href='css/generation.css')
+      title 生成的策略1
+   body
+      include nav.html
+      include user.html
+      include retool.html
+      .container
+         .row
+            include left-side.html
+            include generation-right.html
+      include footer.html
+      include script.html
+      script(src='js/bootstrap.min.js')
+      script(src='js/jquery.pagination.js')
+      script(src='js/all_stocks.js')
+      script(src='js/tool.js')
+      script(src='js/generation.js')

@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+/**
+* 魔力GMAT 样式
+* Author: Yejj
+* Last Changed by Yejj
+* Last Update : 2014-10-02
+*/
+html{background:#96dfd3;}
+.hMainTit{width:570px;height:70px;margin:130px auto 0 auto;}
+.hMainDot{width:690px;height:128px;margin:70px auto 0 auto;}
+.hMainDot dl{width:690px;height:128px;}
+.hMainDot dl dd{width:128px;height:128px;float:left;}
+.hMainDot dl dt{width:128px;height:128px;float:left;padding:0 11px 0 11px;background:url(../images/ky_jt.png) center center no-repeat;}
+.dotBtn{border-radius:64px 64px 64px 64px;display:block;width:128px;height:128px;display:block;}
+
+.dtDt{background:url(../images/xxdt.png) 0 0 no-repeat;}
+
+.zsdDt{background:url(../images/zsd.png) 0 0 no-repeat;}
+
+.zsyDt{background:url(../images/zsy.png) 0 0 no-repeat;}
+
+.hMainBtn{height:51px;margin:100px 0 0 0;}
+.hMainBtn a{background:#9fdfdb;width:183px;height:45px;display:block;margin:0 auto;border-radius:5px;border:3px solid #fff;color:#fff;font:bold 24px/45px "微软雅黑"; text-align:center; text-decoration:none;}
+.hMainBtn a:hover{background:#5bc4cd;}

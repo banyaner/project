@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+/**
+* 魔力GMAT 样式
+* Author: Yejj
+* Last Changed by Yejj
+* Last Update : 2014-10-02
+*/
+html{background:#96dfd3;}
+.hMainTit{width:100%;margin: 20% 20% 0;}
+.hMainDot{width:100%;height:128px;margin:10% 3% 0;}
+.hMainDot dl{width:100%;height:128px;}
+.hMainDot dl dd{width:20%;height:128px;float:left;}
+.hMainDot dl dt{width:20%;height:128px;float:left;padding:0 11px 0 11px;background:url(../images/ky_jt.png) center center no-repeat;}
+.dotBtn{display:block;width:100%;height:100%;display:block;}
+.nxDt{background:url(../images/2.png) 0 0 no-repeat;background-size: 100%}
+.nxDt:hover{background:url(../images/nxms_sub.png) 0 0 no-repeat;background-size: 100%}
+.xbDt{background:url(../images/2.png) 0 0 no-repeat;background-size: 100%}
+.xbDt:hover{background:url(../images/xbms_sub.png) 0 0 no-repeat;background-size: 100%}
+.xsDt{background:url(../images/2.png) 0 0 no-repeat;background-size: 100%}
+.xsDt:hover{background:url(../images/xsms_sub.png) 0 0 no-repeat;background-size: 100%}
+.hMainBtn{height:51px;margin:100px 0 0 0;}
+.hMainBtn a{background:#9fdfdb;width:183px;height:45px;display:block;margin:0 auto;border-radius:5px;border:3px solid #fff;color:#fff;font:bold 24px/45px "微软雅黑"; text-align:center; text-decoration:none;}
+.hMainBtn a:hover{background:#5bc4cd;}

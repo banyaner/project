@@ -1,0 +1,124 @@
+<div class="container">
+    <div class="solidwid" id="main_progress_bar" style="min-height:400px">
+        <div style="top:200px;position:relative;width:300px;margin:auto">
+            <span style="margin:auto">载入数据中</span>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                    <span class="sr-only">载入数据中</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="solidwid hidden">
+        <div class="border">
+            <div class="subtit bgorange">
+                <span class="detailtit">进取组合策略</span>
+                <input type="button" class="btn btn-warning" value="采用策略">
+                <input type="button" class="btn btn-info" value="收藏策略">
+                <a href="pool.html" class="pull-right">返回策略池</a>
+            </div>
+        </div>
+        <div>
+            <div class="border">
+                <div>
+                    <ul id="performance_parts" class="nav nav-pills bgorange">
+                    </ul>
+                </div>
+                <div id="performance_pages">
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="border">
+                <div>
+                    <ul id="part" class="nav nav-pills  bgorange">
+                        <li role="presentation" class="default On">
+                            <a href="#part1">训练参数</a>
+                        </li>
+
+                        <li role="presentation">
+                            <a href="#part2">净值走势</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#part3">回撤走势</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="#part4">策略简介</a>
+                        </li>
+
+                        <!--   <li role="presentation"><a href="#part5">日收益分布</a>
+                        </li>
+                         -->
+                    </ul>
+                </div>
+                <!-- 四个片段 -->
+                <!-- part1 -->
+                <div>
+                    <div class="partstyle" id="part1">
+                    </div>
+                    <!-- part2-->
+                    <div class="partstyle hidden" id="part2">
+                        <div class="solidwid performance_detail_progress_bar" style="min-height:410px">
+                            <div class="loaddata">
+                                <span style="margin:auto">载入数据中</span>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                        <span class="sr-only">载入数据中</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- part3-->
+                    <div class="partstyle hidden" id="part3">
+                        <div class="solidwid performance_detail_progress_bar" style="min-height:410px">
+                            <div class="loaddata">
+                                <span style="margin:auto">载入数据中</span>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                        <span class="sr-only">载入数据中</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- part4-->
+                    <!--    <div class="partstyle hidden" id="part4">
+                        <img src="img/pic.png">
+                    </div> -->
+                    <!-- part5-->
+                    <div class="partstyle hidden" id="part4">
+                        <ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="border">
+            <ul class="nav nav-pills  bgorange">
+                <li role="presentation"><span>过往交易记录</span>
+                </li>
+            </ul>
+            <div class="partstyle auto">
+                <div class="solidwid" id="trace_progress_bar" style="min-height:400px">
+                    <div class="loaddata">
+                        <span style="margin:auto">载入数据中</span>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                <span class="sr-only">载入数据中</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-hover table-bordered hidden" id="trace">
+                    <tr>
+                        <th>时间</th>
+                        <th>标的</th>
+                        <th>数量</th>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+<div class="right border clearfix">
+    <div class="subtit">
+        <div class="pull-left">
+            <ul class="nav" >
+                <li><a href="#state1" id="g-generating">生成中的策略</a></li>
+                <li><a href="#state2" id="g-generated">生成完毕的策略</a></li>
+                <li><a href="#state3" id="g-fail">生成失败的策略</a></li>
+            </ul>
+        </div>
+        <div class="pull-right">
+            <form class="navbar-form navbar-right" role="search" style="margin-right:0px">
+                <!-- place this in css -->
+                <a href="#"><span class="glyphicon glyphicon-trash back" aria-hidden="true"></span>策略回收站</a>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="策略名称/品种/代码">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+        </div>
+    </div>
+    <div class="clearfix">
+        <div id="state1">
+            <table class="table table-striped table-hover" align="center">
+                <thead>
+                <tr>
+                    <th>策略名称</th>
+                    <th>FITNESS</th>
+                    <th>进度</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="generating">
+                </tbody>
+            </table>
+            <div id="pagination0" class="pagination" style="text-align:center"></div>
+        </div>
+        <div id="state2" class="hidden">
+            <table class="table table-striped table-hover" align="center">
+                <thead>
+                <tr>
+                    <th>策略名称</th>
+                    <th>年化收益率</th>
+                    <th>D比率指标名</th>
+                    <th>最大回撤</th>
+                    <th>平均恢复期</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="generated">
+                </tbody>
+            </table>
+            <div id="pagination" class="pagination" style="text-align:center"></div><!-- 显示分页 -->
+        </div>
+        <div  id="state3" class="hidden">
+            <table class="table table-striped table-hover" align="center">
+            <thead>
+            <tr>
+                <th>策略名称</th>
+                <th>失败原因</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody id="fail">
+            </tbody>
+        </table>
+            <div id="pagination1" class="pagination" style="text-align:center"></div><!-- 显示分页 -->
+        </div>
+    </div>
+</div>

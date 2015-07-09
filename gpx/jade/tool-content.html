@@ -1,0 +1,200 @@
+<div class="border clearfix">
+    <h3>欢迎使用GPX系统</h3>
+    <hr size="1" color="#E1E1E1">
+    <form id="poolForm" class="form-horizontal">
+        <div id="form1">
+            <div class="form-group">
+                <label class="col-sm-2 control-label">策略名称：</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" id="t-title" class="validate[required]">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="type" class="col-sm-2 control-label">采样周期：</label>
+                <div class="input-group col-sm-4">
+                    <span class="input-group-addon">
+                        <input type="radio" name="interval" value="24h"  checked="checked">
+                    </span>
+                    <button class="form-control btn btn-default" disabled="">天</button>
+                    <span class="input-group-addon">
+                        <input type="radio" name="interval" value="1m">
+                    </span>
+                    <button class="form-control btn btn-default" disabled="">分钟</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">策略模块：</label>
+                <div class="col-sm-8">
+                    <div class="btn-group dropdown">
+                        <input id="tragetymodel" type="text" class="btn btn-default form-controll" placeholder="请选择策略模块">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="  height: 34px">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul id="tragetycont" class="dropdown-menu  single" role="menu">
+                            <li name="TrendStrategy">趋势策略</li>
+                            <li name="CrossStrategy">交叉策略</li>
+                            <li name="MeanReversionStrategy">均值回归策略</li>
+                            <li name="BoundStrategy">边界策略</li>
+                            <li name="PatternStrategy">形态策略</li>
+                        </ul>
+                        <ul id="tragetycont" class="dropdown-menu hidden multi" role="menu">
+                            <li name="TrendStrategy">趋势策略</li>
+                            <li name="SortAndBuyStrategy">排序买入策略</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">策略简介：</label>
+                <div class="col-sm-9 input-group">
+                    <textarea class="form-control" rows="6" cols="100" id="strategy_intro" maxlength="300"></textarea>
+                    <!--<p class="pull-right">请勿超过300字</p>-->
+                </div>
+            </div>
+            <div class="form-group" id="easymodel">
+                <label for="strategytype" class="col-sm-2 control-label">指标选择：</label>
+                <div class="col-sm-8">
+                    <div class="btn-group dropdown">
+                        <input type="text" class="btn btn-default form-controll validate[required]" placeholder="请选择指标">
+                        <button type="button" id="thisbutton" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="height: 34px">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul id="indicator" class="dropdown-menu" role="menu">
+
+                        </ul>
+                    </div>
+                    <span class="info" id="highmodel">点击展开高级模式</span>
+                </div>
+
+
+                <div class="col-sm-8 col-sm-offset-2">
+                    <select id="chosen" class="form-control" multiple></select>
+                </div>
+                <div class="col-sm-1">
+                    <input type="button" class="btn btn-default form-control" id="del2" value="删除">
+                </div>
+                <div class="col-sm-1  col-sm-offset-10">
+                    <input type="button" class="btn btn-default form-control" id="empty2" value="清空">
+                </div>
+            </div>
+            <div class="form-group hidden" id="model">
+                <label class="col-sm-2 control-label">指标高级模式：</label>
+                <div class="col-sm-9">
+                    <textarea class="form-control" id="high_columns" placeholder="指标"></textarea>
+                    <textarea class="form-control" style="margin-top:32px" id="high_formulas" rows="6" cols="100" placeholder="对自定义指标通过公式解释"></textarea>
+
+                    <span class="info" id="toEasyModel">回归<strong>简易</strong>模式，将舍弃所有高级模式修改</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <div style="margin-left:480px">
+                    <button id="next" type="button" class="btn btn-default">下一步<img src="img/loading.gif" id="load" class="hidden"></button>
+                </div>
+            </div>
+        </div>
+        <div id="form2" class="hidden">
+            <div class="form-group">
+                <label for="strategytit" class="col-sm-2 control-label">策略金额：</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" id="t-cash">
+                </div>
+                <label class="control-label">元</label>
+            </div>
+            <div class="form-group">
+                <label for="type" class="col-sm-2 control-label">可否透支：</label>
+                <div class="input-group col-sm-4">
+                                <span class="input-group-addon">
+                    <input type="radio" name="cash_check" value="false" checked="checked">
+                  </span>
+                    <button class="form-control btn btn-default" disabled="">是</button>
+                                <span class="input-group-addon">
+                    <input type="radio" name="cash_check" value="true">
+                  </span>
+                    <button class="form-control btn btn-default" disabled="" checked="checked">否</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="type" class="col-sm-2 control-label">起止时间：</label>
+                <div class="input-group col-sm-9">
+                    <input id="begintime" class="form-control" type="text" placeholder="2012-01-01">
+                    <span class="spanwrd">至</span>
+                    <input class="form-control" id="endtime" type="text" placeholder="2014-01-01">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">FITNESS：</label>
+                <div class="col-sm-8">
+                    <div class="btn-group dropdown">
+                        <input id="fitness" type="text" class="btn btn-default form-controll" placeholder="请选择FITNESS">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="  height: 34px">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul id="fitnesstype" class="dropdown-menu  single" role="menu">
+                            <li name="return">return</li>
+                            <li name="return">return</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">标的：</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="target" placeholder="请输入6位股票代码，如000001">
+                    <ul id="hintbox">
+                        <li><span>000001</span>
+                            <span>:&nbsp;&nbsp;</span>
+                            <span>上证指数</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-1">
+                    <input type="button" class="btn btn-default form-control aaa" id="add" value="添加">
+                </div>
+
+                <div class="col-sm-8 col-sm-offset-2">
+                    <select id="targets" class="form-control" multiple></select>
+                </div>
+
+                <div class="col-sm-1">
+                    <input type="button" class="btn btn-default form-control aaa" id="del1" value="删除">
+                </div>
+                <div class="col-sm-1  col-sm-offset-10">
+                    <input type="button" class="btn btn-default form-control aaa" id="empty1" value="清空">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">遗传参数：</label>
+                <div class="col-sm-8">
+                    <label class="control-label"><span id="para" class="info">点击展开遗传参数设置</span>&nbsp;&nbsp;请注意：一般情况下，无需修改相关遗传参数。</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div id="paracontent" class="col-sm-9 col-sm-offset-2 hidden">
+                    <label>遗传代数:</label>
+                    <input type="text" value="30" id="iteration">
+                    <label>种群大小:</label>
+                    <input type="text" value="200" id="population">
+                    <label>精英群大小:</label>
+                    <input type="text" value="20" id="elite">
+                    <br>&nbsp;&nbsp;&nbsp;
+                    <label>变异率:</label>
+                    <input type="text" value="0.2" id="mutation">&nbsp;&nbsp;&nbsp;
+                    <label>杂交率:</label>
+                    <input type="text" value="0.3" id="crossover">
+                    <label>结果大小:</label>
+                    <input type="text" value="1" id="t-size">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class=" col-sm-offset-5" style="margin-left:434px">
+                    <input type="button" id="pre1" class="btn btn-default" value="上一步">
+                    <input id="submitstrategy" type="button" class="btn btn-default" value="生成策略">
+                </div>
+            </div>
+        </div>
+        </div>
+

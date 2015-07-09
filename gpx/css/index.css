@@ -1,0 +1,53 @@
+/*index.html carosel*/
+
+.subcon img {
+    float: left;
+    padding-right: 20px;
+}
+
+.white {
+    color: white;
+}
+.bgwhite{
+    background: white;
+}
+.noborder{
+    border: 0px;
+    margin-top: 25px;
+
+}
+
+.subcon {
+    margin-top: 15px;
+    padding: 5px;
+    padding-left: 54px;
+}
+.subcon1 {
+    margin-top: 15px;
+    padding: 5px;
+    padding-left: 54px;
+    border-top: 1px solid #e1e1e1;
+}
+
+.subcon h2 {
+    font-size: 28px;
+    display: inline-block;
+}
+
+.subcon h3 {
+    font-size: 20px;
+}
+
+.subcon p {
+    margin: 5px;
+}
+
+.tinycon {
+    background-image: url(../img/dialog.png);
+    background-repeat: no-repeat;
+    background-position: 51% 42%;
+    padding: 4px;
+    font-size: 11px;
+}
+/*轮播图片样式*/
+

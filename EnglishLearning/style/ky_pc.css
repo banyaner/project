@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+/**
+* 魔力GMAT 样式
+* Author: Yejj
+* Last Changed by Yejj
+* Last Update : 2014-10-02
+*/
+.tmjx{background:#e8ebf1;color:#333;padding:20px 30px 30px 30px;}
+.tmjxTit{width:100%;height:40px;font:bold 14px/30px "微软雅黑";color: #ff9247}
+.tmjxMain{font: normal 12px/22px "微软雅黑";}
+strong{color: #59bfcc}
+.kypc{background:url(../images/ky_tit.png) 0 0 no-repeat;font: normal 21px/71px "微软雅黑"; text-align:center;color:#fff;}
+
+.taotiMain{width:80%;margin:0 auto;}
+.taotiL{width:3.8%;float:left;}
+.taotiM{width:90.4%;min-height:708px;border:1px solid #e8ebf2;border-top:none;float:left;}
+.taotiR{width:3.8%;float:left;}
+.btnL{width:100%;height:58px;display:block;background:url(../images/ti_l.png) no-repeat;margin:225px 0 0 0;}
+.btnR{width:100%;height:58px;display:block;background:url(../images/ti_r.png) no-repeat;margin:74px 0 0 0;}
+.fx{width:65%;height:74px;display:block;background:#efeeee;color:#828999;margin:78px 0 0 0;border-radius:0 2px 2px 0; text-decoration:none;text-align:center;font: normal 12px/22px "微软雅黑";}
+
+
+.subMainTest{width:1080px;margin:0 auto;color:#a3abbe;}
+.testLeft{width:49px;float:left;padding:230px 0 0 0;}
+.testLeft a{width:49px;height:58px;background:url(../images/jt_l.png) 0 0 no-repeat;display:block;}
+.testLeft a:hover{width:49px;height:58px;background:url(../images/jt_l_sub.png) 0 0 no-repeat;display:block;}
+
+.testRight{width:49px;float:Left;padding:230px 0 0 0;}
+.testRight a{width:49px;height:58px;background:url(../images/jt_r.png) 0 0 no-repeat;display:block;}
+.testRight a:hover{width:49px;height:58px;background:url(../images/jt_r_sub.png) 0 0 no-repeat;display:block;}
+
+.testMain{width:977px;border-left:1px solid #e8ebf1;border-right:1px solid #e8ebf1;border-bottom:1px solid #e8ebf1;float:left;}
+.testMainIn{width:96%;margin:0 auto;}
+.testTop{width:96%;height:50px;border-bottom:1px solid #e8ebf1;font:normal 14px/50px "微软雅黑";color:#93999e;}
+.testNu{float:left;width: 20%}
+.testNu span{ font-weight:bold;}
+.testTime{width:31%;margin:0 auto;display:inline-block;height:50px;background:url(../images/colck.jpg) left center no-repeat;position:relative;left:20%; text-indent:4%;font-size:0.7rem;}
+.testTime span{color:#dd5501;}
+.testEx{float:right;width:9%;text-indent:20px;}
+.testEx a{color:#f26432;text-decoration:none;width:80px;background:url(../images/ext.gif) left center no-repeat;display:block;}
+.testEx a:hover{text-decoration:underline;color:#f26432;}
+.testTimu{width:100%;padding:2% 0 3% 0;font:14px/24px Arial, Helvetica, sans-serif;}
+.testTimuLeft{width:444px;color:#7c8185;float:left;padding:0 30px 0 0;overflow:auto;max-height:600px;}
+.testTimuRight{width:440px;float:right;color:#7c8185;overflow:auto;max-height:600px;}
+.testList{width:400px;height:34px;}
+.testList li{width:34px;height:34px;float:left;padding:0 5px 0 0;}
+.testList li a{width:34px;height:34px;text-align:center;display:block;color:#93999e; text-decoration:none; font:18px/34px normal Arial, Helvetica, sans-serif;}
+.testList li a:hover,.testList .cruuent a{background:#00acee;color:#fff;}
+.testAnsw{width:400px;font:14px/20px Arial, Helvetica, sans-serif;padding:15px 0 15px 0;}
+.ansList{width:300px;}
+.ansListOne{width:300px;display:block;margin:15px 0 0 0;cursor:pointer;color:#000;}
+.ansListOneL{width:60px;background:url(../images/chon.png) 8px 6px no-repeat;font:bold 18px/30px Arial, Helvetica, sans-serif;text-indent:30px;float:left;display:inline-block;}
+.ansListOneR{width:300px;display:block;}
+/*.ansListOneR{width:300px;display:inline-block;}*/
+
+.ansList dt{width:400px;height:33px;margin:15px 0 0 0;}
+.ansList dt a{width:112px;height:33px;background:url(../images/test_btn.gif) 0 0 no-repeat;display:block;color:#fff; text-align:center;font: normal 16px/33px "微软雅黑"; text-decoration:none;}
+
+.testBlank{width:100%;height:20px;}
+.timuMain{width:100%;color:#000;margin:0 auto;}
+.ansList2{width:100%;margin:0 auto;color:#000;}
+.ansList2One{width:100%;display:block;margin:20px 0 0 0; cursor:pointer;}
+.ansList2OneL{width:6.5%;float:left;background:url(../images/chon.png) 8px 6px no-repeat;font:bold 18px/30px Arial, Helvetica, sans-serif;text-indent:4%;}
+
+.ansListHover{background-image: url(../images/cho.png);}
+.ansList2OneR{float:left;width:90%;line-height:30px;}
+.ansList2 dt{width:100%;height:33px;padding:30px 0 0 0;}
+.ansList2 dt a{width:112px;height:33pxbackground: #e2e6ef;-moz-border-radius:5px;-webkit-border-radius:5px; border-radius:5px;display:block;color:#fff; text-align:center;font: normal 16px/33px "微软雅黑"; text-decoration:none;}
+.ansListBg{background: #e2e6ef;-moz-border-radius:5px;-webkit-border-radius:5px; border-radius:5px;}
+.ansList2 dt p{font:bold 16px/33px "微软雅黑";color:#11a4df;}
+
+.nextBtn{height:33px;width:25%;padding:0 0 0 20px;margin-top: 40px;}
+.nextBtn a{width:100px;height:33px;border-radius:2px;font-size:1rem;font-family:"微软雅黑"; display:block;background:#A9A9A9;color:#fff; text-align:center; text-decoration:none;font: normal 16px/33px "微软雅黑";}
+
+.pxAnswer{width:400px;margin-top:15px;}
+.paixuLine{width:400px;height:36px;}
+.lineNum{width:33px;height:33px;border:1px solid #caced7;background:#fff;text-align:center;font:normal 21px/33px Tahoma, Geneva, sans-serif;float:left;margin-right:20px;}
+.paixujt{width:390px;height:13px;margin:5px 0 5px 10px;background:url(../images/jt.png) left center no-repeat;}
+
+.pxTjBtn{width:100%;height:33px;padding:10px 0 0px 0;}
+
+
+.answerJx{width:400px;padding:30px 0 0 0;}
+.rightAns{height:20px;font:normal 18px/20px "黑体";color:#55c1cf;padding:0 0 30px 0;}
+.testJx{width:360px;background:#f2f3f7;padding:20px;}
+.testJxTit{font:normal 18px/20px "黑体";color:#ff9247;height:20px;padding:0 0 20px 0;}
+.textJxMain{line-height:23px;font-family:"宋体";}
+.textJxMain span{color:#59bfcc;}

@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+/**
+* 魔力GMAT 样式
+* Author: Yejj
+* Last Changed by Yejj
+* Last Update : 2014-10-02
+*/
+.img-center{display: block;margin: 0 auto;}
+.aqzx{font: normal 21px/71px "微软雅黑"; text-align:center;color:#fff;}
+.aqzxMain{width:60%;margin:0 auto;}
+.aqzxTit{height:110px;font:normal 20px/110px "微软雅黑";color:#ff9147;}
+.aqzxBz{width:100%;height:60px;margin:0 auto;}
+.aqzxWd{height:29px;margin:90px auto 0 auto;text-align:center;}
+
+
+.nextBtn{height:46px;width:161px;padding:60px 0 50px 0;margin:0 auto;}
+.nextBtn a{width:161px;height:46px;border-radius:2px;font-size:1.8rem;font-family:"微软雅黑"; display:block;background:#29b6f6;color:#fff; text-align:center; text-decoration:none;font: normal 23px/46px "微软雅黑";}
+
+.aqzxDl{width:273px;margin:50px auto;}
+.aqzxDl dd{height:29px;padding:0 0 14px 0;}
+.aqzxDl dd label{font:normal 15px/29px "微软雅黑";color:#3d3d3d;float:left;width:85px;height:29px;}
+.inp1{width:145px;height:27px;border:1px solid #bababa;float:left; border-radius:2px;padding:0 15px;}
+.inp2{width:65px;height:27px;border:1px solid #bababa;float:left; border-radius:2px;padding:0 15px;}
+.aqzxDl dt{height:29px;padding:14px 0 14px 0;}
+.aqzxDl dt a{width:89px;height:29px;border-radius:2px;font-size:29px;font-family:"微软雅黑"; display:block;background:#29b6f6;color:#fff; text-align:center; text-decoration:none;font: normal 16px/29px "微软雅黑";margin-left:85px;}
+.aqzxDl dd span{width:64px;height:28px;float:left;}
+.aqzxDl dd a{color:#75ccd3;font:normal 12px/29px "宋体"; text-decoration:none;float:left;}
+.aqzxDl dd a:hover{ text-decoration:underline;}
+
+.yzsfWd{text-align:center;margin-top:60px;color:#3d3d3d;font: normal 16px/20px "微软雅黑";height:20px;}
+.yzsfTb{width:350px;margin:35px auto 0 auto;}
+.yzsfTbOne{width:175px;height:175px;background:url(../images/yxzh.png) top center no-repeat;float:left; text-align:center}
+.yzsfTbOne a{color:#5bc0cc;font:normal 14px/29px "微软雅黑"; text-decoration:none;margin:80px 0 0 0;display:inline-block;}
+.yzsfTbOne a:hover{ text-decoration:underline;}
+.yzsfTbTwo{width:175px;height:175px;background:url(../images/sjzh.png) top center no-repeat;float:left; text-align:center}
+.yzsfTbTwo a{color:#5bc0cc;font:normal 14px/29px "微软雅黑"; text-decoration:none;margin:80px 0 0 0;display:inline-block;}
+.yzsfTbTwo a:hover{ text-decoration:underline;}
+
+
+.mask{width: 100%;height: 990px;background: #000;opacity: 0.2;filter:Alpha(opacity=20);position: absolute;left:0;top:0;display:;}
+.winTop{width:100%;height:38px;background:#29b6f6;border-radius:5px 5px 0 0; text-align:center;font:normal 17px/38px "微软雅黑";color:#fff;}
+.winTop a{width:15px;height:15px;background:url(../images/colse.png) 0 0 no-repeat;display:block;float:right;margin:5px 5px 0 0;}
+.winMain{padding:0;}
+
+
+.saveBtn{width:85px;height:30px;background:#29b6f6;display:block;float:right; text-align:center;font:normal 12px/30px "微软雅黑";border-radius:3px;color:#fff; text-decoration:none;margin-right:10px;}
+
+.changPhone{width:410px;height:290px;background:#fff;position:absolute;left:40%;top:220px;z-index:9999;border-radius:5px;display:;}
+.changPhoneDl{width:340px;margin:0 30px;padding-top:45px;}
+.changPhoneDl dd{padding:0 0 10px 0;height:30px;}
+.changPhoneDl dt{padding:10px 0 10px 0;height:30px;}
+.changPhoneDl dt a{width:85px;height:28px;border:1px solid #cdcdcd;background:#e6e6e6;border-radius:3px;display:block;font:normal 12px/28px "微软雅黑";text-align:center; text-decoration:none;color:#464646;}
+.changPhoneDl dd label{width:87px;height:30px;float:left;font:normal 14px/30px "微软雅黑";color:#3d3d3d; text-align:right;padding:0 10px 0 0;}
+.ipnLong{width:175px;height:28px;border:1px solid #cacaca;background:#fff;padding:0 10px;border-radius:3px;color:#464646;font:normal 12px/28px "微软雅黑";}
+.ipnShort{width:100px;height:28px;border:1px solid #cacaca;background:#fff;padding:0 10px;border-radius:3px;color:#464646;font:normal 12px/28px "微软雅黑";float:left;margin-right:25px;}

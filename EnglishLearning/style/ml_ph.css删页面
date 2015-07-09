@@ -1,0 +1,49 @@
+@charset "utf-8";
+/* CSS Document */
+/**
+* 魔力GMAT 样式
+* Author: Yejj
+* Last Changed by Yejj
+* Last Update : 2014-10-02
+*/
+
+.taotiMain{width:1077px;margin:0 auto;}
+.taotiL{width:49px;float:left;}
+.taotiM{width:977px;height:708px;border:1px solid #e8ebf2;border-top:none;float:left;overflow:hidden;}
+.taotiR{width:49px;float:left;}
+.btnL{width:49px;height:58px;display:block;background:url(../images/ti_l.png) no-repeat;margin:225px 0 0 0;}
+.btnR{width:49px;height:58px;display:block;background:url(../images/ti_r.png) no-repeat;margin:74px 0 0 0;}
+.fx{width:33px;height:74px;display:block;background:#efeeee;color:#828999;margin:78px 0 0 0;border-radius:0 2px 2px 0; text-decoration:none;text-align:center;font: normal 12px/22px "微软雅黑";}
+
+.phSchool{width:750px;margin:90px auto 0 auto; text-align:center;}
+.oraWord{font:normal 21px/30px "微软雅黑";color:#f59657;}
+.phSchool select{width:120px;height:21px;background:#fff;border:1px solid #bababa; border-radius:2px;margin:0 10px 0 0;font:normal 14px/21px "微软雅黑";}
+.phSchool a{font:normal 15px/30px "微软雅黑";margin:0 5px 0 5px; text-decoration:none;}
+.bluWord{color:#5abfcc;}
+.huiWord{color:#bababa;}
+.bluWord{color:#61c2cb;font:normal 21px/30px "微软雅黑";}
+.schName{font-size:25px;}
+.shuiWord{color:#7e7e7e;padding-left:15px;}
+
+.phMain{width:750px;margin:60px auto 0 auto;}
+.phMainOne{width:356px;height:336px;background:#fff;border:3px solid #61c2cb; border-radius:10px;color:#676767;}
+.phOneLine{font:normal 18px/24px "微软雅黑";padding:80px 0 0 0; text-align:center;}
+.oraClor{color:#f59657;}
+.bluClor{color:#61c2cb;}
+.phOneNo{height:120px;font:bold 60px/120px Impact; text-align:center;color:#e47d03;}
+.phOneLink{height:20px;font:normal 17px/24px "微软雅黑"; text-align:center;}
+.phOneLink a{color:#676767; text-decoration:none;}
+
+.phMainZz{width:750px;margin:0 auto 0 auto;position:relative;top:-342px;}
+.phMainZzOneL{width:362px;height:342px;background:url(../images/ph_zz.png) 0 0 no-repeat;display:none;float:left;}
+.phMainZzOneR{width:362px;height:342px;background:url(../images/ph_zz.png) 0 0 no-repeat;display:none;float:right;}
+.closeZz{width:100%;height:25px;}
+.closeZz a{width:13px;height:13px;background:url(../images/zz_xx.png) 0 0 no-repeat;display:block;float:right;margin:10px 10px 0 0;}
+.phMainZz table{color:#fff;width:318px;margin:0 auto;}
+.phMainZz table td{height:26px;text-align:center;font:normal 13px/26px "微软雅黑";}
+.td1{width:50px;border-right:1px solid #525252;border-bottom:1px solid #525252;}
+.td2{width:133px;border-right:1px solid #525252;border-bottom:1px solid #525252;}
+.td3{border-bottom:1px solid #525252;}
+.td4{width:50px;border-right:1px solid #525252;}
+.td5{width:133px;border-right:1px solid #525252;}
+.td6{}

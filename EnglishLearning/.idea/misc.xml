@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpServers">
+    <option name="servers">
+      <server deployment_server="adba403b-dca4-4657-a0fb-6614a1678f00" host="www.aicolink.com" name="aicolink" validation_dir="$PROJECT_DIR$/../aicolink" />
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" />
+</project>
+

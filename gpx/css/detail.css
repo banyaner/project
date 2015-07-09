@@ -1,0 +1,337 @@
+body{
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size:12px;/*字体大小*/
+    line-height:1.7;
+    background-color: #fff;  
+    color: #eee;    /*字体颜色*/  
+    
+}
+body{
+	margin: 0px;
+}
+.topbar{
+	height: 28px;
+    background: none repeat scroll 0% 0% #f7f7f7;/*背景颜色*/
+}
+.container{margin-right: auto;/*外边距右边留空*/
+           margin-left: auto;/*外边距左边留空*/
+}
+.topbar a > span{
+	line-height: 28px;
+	margin: 0px 8px;
+	color: #000;
+    font-family:"Microsoft Yahei";
+}
+.topbar .vertical-divider{
+	width: 2px;
+	height: 20px;
+	margin: 4px 8px;
+	background: none repeat scroll 0% 0% #C4C4C4;
+}
+.pull-right{
+	float: right !important;
+}
+.container::after{
+	clear: both;
+}
+.container::before,.container::after{
+	content: " ";
+	display: table;
+}
+.title-stripe{
+	height: 90px;
+	background: #ffffff;
+}
+.title-stripe a{
+	text-decoration: none;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0px 0px 0px 60px;
+	padding: 30px;
+}
+.title-stripe a > span{
+	font-size: 15px;
+	color: #000;
+	font-family:"Microsoft Yahei";
+	
+}
+img{
+	vertical-align: middle;
+}
+img{border: 100px none;}
+* {
+	box-sizing: border-box;
+}
+.description{
+    height: 112px;
+	background-image: url("../img/huanse.png");
+}
+.logo{
+	height: 120px;
+	background-image: url("../img/logo23.png");
+	margin-top: -8px;
+}
+.toang{
+	height: 850px;
+	background: #eeeeee;
+	border-top-width: 10px;/*边框上宽度为10px*/
+	border-top-style: solid;/*边框上实线*/
+}
+.yan{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+
+}
+.first{
+	color: #000;
+}
+.footer{
+	background: #eeecec;
+	text-align: center;
+	padding: 20px 0px 40px;
+
+}
+.fullwidth{
+	width: 100%;
+	margin-top: 0px;
+	padding: 0px;
+}
+/*.container{*/
+	/*width: 1000px;*/
+	/*padding: 0px;*/
+/*}*/
+.containe::before,.container::after{
+	content: " ";
+	display: table;
+}
+*::before, *::after{
+	box-sizing: border-box;
+}
+.footer{
+	background-image:url(../img/footer.png);
+}
+
+a{
+	color: #a5a5a5;
+	text-decoration: none;/*字体下划线为无*/
+}
+span{
+	color: #a5a5a5;
+	
+}
+.yu{
+	border: 1px solid #fa9306;
+	width: 993px;
+	height: 35px;
+	background: #f87c02;
+	margin: auto;
+	top: 0px;
+	border-width: 0px;
+	line-height:2.5;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-left: 10px;
+	
+}
+.celie2{
+	font-family:"Microsoft Yahei";
+	font-size: 14px;
+    text-decoration: underline;/*下划线*/
+    color: #ffffff;
+    padding-left: 10px;
+    margin: 0px 10px 0px ; /*外边距10Px*/
+    float: right;
+
+ }
+.celie{
+	
+	
+	background: #fac800;/*填充颜色*/
+	padding: 5px; /*内填充*/
+	max-width: 100px; /*设置元素最大宽度*/
+	border-radius: 5px;/*边框圆角*/
+	line-height: 1.2;
+	font-family:"Microsoft Yahei";/*微软雅黑*/
+	font-size: 12px;
+	margin-left: 25px; /*外边距10Px*/
+	margin-right: 5px;
+}
+.celie span{
+	padding-left: 10px;
+	padding-right: 5px;
+}
+.celie1{
+	background: #00a5b0;/*填充颜色*/
+	padding: 5px 6px; /*内填充*/
+	max-width: 100px; /*设置元素最大宽度*/
+	border-radius: 5px;/*边框圆角*/
+	line-height: 1.2;
+	margin: 10px; /*外边距10Px*/
+	font-size: 12px;
+	font-family:"Microsoft Yahei";/*微软雅黑*/
+}
+.celie1 span{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.toang a >span{
+	color: white; /*字体颜色为白色*/
+
+}
+.toang .celie3{
+	color: white;
+	font-family: "Microsoft Yahei";
+	font-size:18px;
+	font-weight: bold;/*加粗*/
+	
+	line-height: 1.7;
+}
+.biange{
+	width: 993px;
+	
+	margin: auto;/*外边距水平居中*/
+	margin-top: 10px;/*外边距向下移动10px*/
+}
+table{
+	border-collapse: collapse;/*表格相邻边被合并*/
+	width: 993px;
+	height: 30px;
+	margin: auto;/*表格水平居中*/
+	border-width: 1px;
+    
+}
+.biange img{
+	margin-left: 5px;
+	margin-bottom: 2px;
+}
+td{
+	border: 1px solid #ececec;/*边框 1px 实线 灰白色*/
+	text-align: center;  /*表格文本对齐*/
+	padding: 5px;  /*表格内容与边框的距离为20像素*/
+	/*background-color: white; /*表格背景颜色*/
+	color: #7f7f7f;          /*表格字体颜色为灰色*/
+	font-family: "Microsoft Yahei";/*字体为雅黑*/
+	font-size:14px;    /*字体大小为14px*/
+    
+
+}
+tr.altrow{
+	background-color: white;/*隔行变色为白色*/
+}
+tr{
+	background-color: #f7f7f7;/*隔行变色为灰色*/
+}
+.bianti{
+	border: 1px solid #ececec;/*边框 1px 实线 灰白色*/
+	width: 993px;
+	
+    margin-top: 20px;  /*外边距20px*/
+
+}
+.bianti a >span{
+	color: #757575;
+	margin: 0px 10px 0px 10px;
+	font-family: "Microsoft Yahei";/*字体为雅黑*/
+	font-size:14px;    /*字体大小为14px*/
+    line-height: 2.3;
+    margin-left: 10px;
+    margin-right: 8px;
+}
+.ul_bianti{
+	border:1px solid #ececec;
+	padding-top: 5px;
+	padding-bottom: 5px;
+    background: #f5f5f5;
+}
+#fansi{
+	background: white;
+	width: 988px;
+	height: 420px;
+}
+.bianti a:hover{
+	background: white;
+	padding: 11px 10px 10px;
+}
+.ti1{
+	margin-top: 0px;
+	margin-left: 10px;
+	margin-bottom: 0px;
+	margin-right: 10px;
+	padding: 17px 10px 13px;
+}
+.fansileft{
+	width: 460px;
+	font-size: 14px;
+    padding-top: 10px;
+}
+.fansitu{
+	width: 520px;
+	height: 300px;
+	background-image: url("../img/tupang.png");
+	float: right;
+	margin-top: -370px;
+	margin-right: 3px;
+}
+ul{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+ul li{
+	list-style-type: none;
+	color: #000;
+}
+#nanrou{
+	font-family: "Microsoft Yahei";/*字体为雅黑*/
+	font-size:16px;    /*字体大小为14px*/
+	color: purple;
+}
+.zousi{
+	background-image: url(../img/pic.png);
+	height: 430px;
+}
+#san{
+	background: white;
+	width: 988px;
+	height: 420px;
+}
+.fansitutu{
+	width: 520px;
+	height: 300px;
+	background-image: url("../img/tupang.png");
+	float: right;
+	margin-top: 0px;
+	margin-right: 3px;
+}
+#si{
+	width: 988px;
+	font-size: 16px;
+    padding-top: 10px;
+    padding-right: 30px;
+    background: white;
+    height: 420px;
+}
+#si ul{
+
+}
+#si span{
+
+}
+.jian{
+	background-image: url("img/footer.png" );
+	padding-top: 20px;
+
+}
+.jian a{
+	margin-left: 0px;
+    margin-right: 10px;
+}
+.jian span{
+	margin-left: 5px;
+    margin-right: 5px;
+}
+.auto{
+	height: 500px;
+	overflow-y:auto;
+	overflow-x:hidden;
+}

@@ -1,0 +1,15 @@
+#hintbox {
+    list-style: none;
+    padding-left: 0px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    width: 100%;
+    z-index: 1;
+    display: none;
+    overflow: scroll;
+    height: 100px;
+    padding-left: 10px;
+    position: absolute;
+    background-color: #fff;
+    width: 522px;
+}

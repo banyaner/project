@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*登录注册*/
+#regBox{width:100%;margin:0 auto;background:#6480a9; overflow:hidden;}
+.regBoxIn{width:990px;min-height:800px;background:url(../images/reg_bg.jpg) 0 0 no-repeat;position:relative;margin:0 auto;}
+.regLogo{width:362px;height:105px;background:url(../images/reg_log.png) 0 0 no-repeat;float:left;position:relative;top:163px;left:96px;}
+.regLogo a{width:362px;height:105px;display:block;}
+
+.regBg{width:375px;color:#828999;background:#FFFFFF;-moz-border-radius:5px;-webkit-border-radius:5px; border-radius:5px;position:absolute;top:70px;right:132px;}
+.regBgTop{height:50px;font:normal 24px/51px "微软雅黑";color:#828999;border-bottom:1px solid #54698a;}
+.topName{float:left;text-indent:23px;}
+.topChange{float:right;padding:0 23px 0 0;}
+.topChange a{color:#828999;text-decoration:none;}
+.topChange a:hover{color:#00bff3;}
+
+.regForm{padding:0 30px;}
+.inp .inpReg{width:295px;height:41px;background:#e2e6ef;font:normal 18px/41px "微软雅黑";padding:0 8px 0 12px;color:#828999;border:1px solid #a3abbe;-moz-border-radius:5px;-webkit-border-radius:5px; border-radius:5px;margin-top:23px;}
+.inpReg:hover{background:#e6eaf4;border:1px solid #00bff3;}
+.remeber{margin-top: 8px;text-align: center;font:normal 12px/20px "微软雅黑";height:20px;}
+.regBtn{width:297px;height:43px;background:#00bff3;display:block;color:#fff;font:normal 20px/43px "微软雅黑";text-align:center; text-decoration:none;-moz-border-radius:3px;-webkit-border-radius:3px; border-radius:3px;border: 0;margin-top: 10px;padding:0 8px 0 12px;}
+.regBot{height:50px;}
+
+.otherUs{font:normal 14px/43px "微软雅黑";text-indent:125px;}
+.otherUs a{color:#828999;text-decoration:none;}
+.otherUs a:hover{text-decoration:underline;}
+.inp2{width:329px;height:43px;position:relative;}
+.inp3{width:329px;height:43px;position:relative;}
+.inp2 img {position:absolute;left:0;top:-6px;left:15px;}
+.inp3 img {position:absolute;left:0;top:-6px;left:15px;}
+.inpLog{width:295px;height:41px;background:#e2e6ef;font:normal 18px/41px "微软雅黑";padding:0 8px 0 12px;color:#828999;border:1px solid #a3abbe;-moz-border-radius:5px;-webkit-border-radius:5px; border-radius:5px;text-indent:36px;margin-top:23px;}
+.inpLog:hover{background:#e6eaf4;border:1px solid #00bff3;}
+
+.remCho{margin-top: 8px;text-align: left;font:normal 12px/20px "微软雅黑";height:20px;}
+.remCho a{color:#828999;text-decoration:none;}
+.remCho a:hover{text-decoration:underline;}
+.choNex a{width:14px;height:14px;background:url(../images/dot2.gif) 0 0 no-repeat;display:inline-block;position:relative;top:2px;}
+.choNex a.current{background:url(../images/dot.gif) 0 0 no-repeat;}
+
+.back{height: 68px;width: 68px;cursor: pointer;position: absolute;right: 30px;top:0;background: url(../images/back.png) no-repeat left top;}
+
+
+/*低分辨率*/
+@media screen and (max-width:990px){
+	#regBox{overflow:auto;}
+	.regBoxIn{width: 100%;background: none;height: auto;}
+	.regBg{width:100%;position:static;}
+	.inp .inpReg{width:90%;}
+	.inpLog{width:90%;}
+	.inpReg:hover{background:#e6eaf4;border:1px solid #00bff3;}
+	.regBtn{width:90%;}
+	::-webkit-scrollbar{width:0;}
+}

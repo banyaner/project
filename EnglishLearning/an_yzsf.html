@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="魔力 GMAT" />
+	<meta name="robots" content="all" />
+	<meta name="Copyright" content="魔力 GMAT" />
+	<meta name="Description" content="魔力 GMAT" />
+	<meta name="Keywords" content="魔力 GMAT" />
+	<title>魔力 GMAT</title>
+    <link href="style/reset.css" type="text/css" rel="stylesheet" />
+	<link href="style/global.css" type="text/css" rel="stylesheet" />
+    <link href="style/an_cg.css" type="text/css" rel="stylesheet" />
+    <link href="style/base.css" type="text/css" rel="stylesheet" />
+       <style type="text/css">
+        @media (max-width:900px){
+        #boxOut{
+        width: 1000px!important}
+        .mask{width:1000px !important}
+        }
+        .subMain{ width: 900px!important}}
+    </style>
+</head>
+
+<body>
+    <div id="boxOut">
+        <div class="subTop">
+            <a href="home.html"><img src="images/logo.png" style="position:absolute;left:20%"></a>
+                <div class="aqzx">安全中心</div>
+        </div>
+        <div class="subMain">
+        	<div class="aqzxMain">
+        		<div class="aqzxTit">找回密码</div>
+                <div class="aqzxBz"><img src="images/an_02_bz.png" class="img-responsive img-center"></div>
+                <div class="yzsfWd">为了你的账号安全，请选择以下方式完成身份验证后找回密码</div>
+                <div class="yzsfTb">
+                	<div class="yzsfTbOne">
+                    	<a href="#">邮箱找回</a>
+                    </div>
+                    <div class="yzsfTbTwo"><a href="#" id="meszh">短息找回（139*****147）</a></div>
+                </div>
+        	</div>
+        </div>
+        
+        <div class="mask"></div>
+        <div class="changPhone">
+        	<div class="winTop">找回密码
+            	<a class="closeBtnPsd" href="#"></a>
+            </div>
+            <div class="winMain">
+            	<dl class="changPhoneDl">
+                	<dd><label>验证方式：</label><input type="text" class="ipnLong" placeholder="密保手机138****123"></dd>
+                    <dt><label></label><a href="#">发送验证码</a></dt><br>
+                    <dd><input type="text" class="ipnShort" placeholder="短信验证码"><a href="an_czmm.html" class="saveBtn">确定</a></dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="scripts/jquery-1.8.2.min.js" type="text/javascript"> </script>
+<script type="text/javascript">
+
+   $('#meszh').on('click',function(){
+    	$('.changPhone').show();
+        $('.mask').show();
+    })
+   $('.closeBtnPsd').on('click',function(){
+	   $('.changPhone').hide();
+	   $('.mask').hide();
+   });
+   
+   
+</script>
+</html>

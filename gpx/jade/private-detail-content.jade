@@ -1,0 +1,52 @@
+//
+   Created by bxy on 15/5/23.
+//
+
+div(class="container")
+    div(class="solidwid" id="main_progress_bar" style="min-height:400px")
+        div(style="top:200px;position:relative;width:300px;margin:auto")
+            span(style="margin:auto") 载入数据中
+            div(class="progress")
+                div(class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%")
+                    span(class="sr-only")
+    div(class="row top-row panel")
+        div(class="col-md-4" id="Intro")
+            div(class="col-md-4") 名称
+            div(class="col-md-8" id="StrategyName") name
+            div(class="col-md-4") 简介
+            div(class="col-md-8" id="StrategyIntro") intro
+            div(id="ControlButtons")
+        div(class="col-md-8" id="StrategyParam")
+            div(class="col-md-2") 策略类型
+            div(class="col-md-4" id="type") NAN
+            div(class="col-md-2" ) 策略周期
+            div(class="col-md-4" id="interval") NAN
+            div(class="col-md-2") 使用字段
+            div(class="col-md-10" id="columns") NAN
+            div(class="col-md-2") 相关公式
+            div(class="col-md-10" id="formulas") NAN
+    div(class="row down-row panel" id="Task")
+        table(id="List" class="table")
+            thead
+                tr
+                    th 序号
+                    th 类型
+                    th 起始时间
+                    th 结束时间
+                    th 初始资金
+                    th 标的数量
+            tbody
+        div(id="Detail")
+            div
+                div(id="Close")
+                    span(class="glyphicon glyphicon glyphicon-remove" aria-hidden="true")
+                hline
+                h2 参数
+                div(id="parameter")
+                h2 表现指标
+                div(id="perform")
+                div(id="perform_train")
+                h2 曲线
+                div(id="net_value")
+                h2 交易日志
+                div(id="trace")

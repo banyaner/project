@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+/**
+* 魔力GMAT 样式
+* Author: Yejj
+* Last Changed by Yejj
+* Last Update : 2014-10-02
+*/
+
+.modelTestIn{width:715px;padding:105px 0 0 135px;}
+.modTesInTit{height:20px;color:#29b6f6;font:bold 18px/20px "黑体","微软雅黑";padding:0 0 35px 0;}
+.modTesInUl li{height:20px;font:bold 14px/20px "微软雅黑";color:#333333;padding:0 0 20px 0;}
+.modTesInBot{height:20px;color:#f46854;font:bold 14px/20px "微软雅黑";padding:15px 0 35px 0;}
+.modTesInBot span{color:#948e8e;padding-left:28px;}
+.nextBtn{height:33px;width:122px;float:right;}
+.nextBtn a{width:122px;height:33px;border-radius:2px;font-size:16px;font-family:"微软雅黑"; display:block;background:#29b6f6;color:#fff; text-align:center; text-decoration:none;font: normal 16px/33px "微软雅黑";}
+
+.listChexL{width:40px;height:20px;float:left;}
+.cheBox{width:19px;height:19px;background:url(../images/chen.png) 0 0 no-repeat;display:block;}
+.cheBoxN{background:url(../images/che.png) 0 0 no-repeat;}
+
+.modTesInUl li a{display:inline-block;width:19px;height:19px;background:url(../images/chen.png) no-repeat 0 0;cursor:default;margin-right:15px;position:relative;top:3px;}
+.modTesInUl li a.current{background: url(../images/che.png) no-repeat left bottom;}

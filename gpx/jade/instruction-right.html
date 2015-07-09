@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<div class="right border clearfix">
+    <h3>关于SDK策略开发接口</h3>
+    <hr size="1" color="#E1E1E1" />
+    <div id="content" style="margin:20px">
+        <p> 策略的书写过程分为“离线”的SDK开发与“在线”的实时运行两部分。初始资金的设定交由策略供给方自行判断。 </p>
+        <ol>
+            <li>数据下载:
+                <ol>
+                    <li>历史天级数据：允许用户本地少量存储历史数据，用以策略的离线开发和调试，本网站提供相应的下载链接。 </li>
+                    <li>历史分钟级数据：
+                        <ol>
+                            <li>若成为该公司的高级会员，可以邮件索取； </li>
+                            <li>可以提交相应的策略，由本公司托管测，按照使用相关资源进行收费； </li>
+                        </ol> </li>
+                </ol> </li>
+            <li> <p>API接口: <br />1.使用接口： <br /> 导入客户端接口: </p> <pre class="code-wrapper ">
+                                <code class=" hljs python"><span class="hljs-keyword">from</span> client <span class="hljs-keyword">import</span> NexusClient
+                                    <span class="hljs-keyword">from</span> model <span class="hljs-keyword">import</span> Trade,ttypes
+                                </code>
+                            </pre> <p>2.客户端配置信息： </p> <pre class="code-wrapper "><code class=" hljs avrasm">nc = NexusClient()
+                config = ttypes<span class="hljs-preprocessor">.TradeConfig</span>()
+                config<span class="hljs-preprocessor">.Tstart</span> = <span class="hljs-string">&quot;2012-01-01&quot;</span>
+                config<span class="hljs-preprocessor">.Tend</span> = <span class="hljs-string">&quot;2013-06-30&quot;</span>
+                config<span class="hljs-preprocessor">.Interval</span> = <span class="hljs-string">&quot;24h&quot;</span>
+                config<span class="hljs-preprocessor">.CashCheck</span> = <span class="hljs-number">0</span>
+                targets = {}
+                targets[<span class="hljs-string">&quot;stock:000001&quot;</span>] = [<span class="hljs-string">&quot;CloseMA5=MA(5,MA(5,CLOSE))&quot;</span>]
+                config<span class="hljs-preprocessor">.Targets</span> = targets
+                config<span class="hljs-preprocessor">.AccountInitials</span> = [<span class="hljs-number">10000.0</span>]
+                config<span class="hljs-preprocessor">.AccountTypes</span> = [<span class="hljs-string">&quot;stock&quot;</span>]
+            </code></pre> <p>3.客户端注册： </p> <pre class="code-wrapper "><code class=" hljs bash">  nc.regist(<span class="hljs-string">'localhost'</span>, <span class="hljs-number">9090</span>, config)
+            </code></pre> <p>4.开发运行客户端，运行自己的策： </p> <pre class="code-wrapper "><code class=" hljs avrasm">  nc<span class="hljs-preprocessor">.run</span>(dataTick,timeTick)
+            </code></pre> <p>5.关闭客户端： </p> <pre class="code-wrapper "><code class=" hljs perl">  nc.<span class="hljs-keyword">close</span>()
+            </code></pre> <p>6.获取数据接口： <br /> 服务器发送给客户端的数据 </p> <pre class="code-wrapper "><code class=" hljs scss">  <span class="hljs-function">dataTick(tick)</span>
+                <span class="hljs-function">timeTick(ticks)</span>
+            </code></pre> <p>7.基本tick中包含的数据信息: </p> <pre class="code-wrapper "><code class=" hljs scss">  <span class="hljs-function">Tick(Data={<span class="hljs-string">'VOLUME'</span>: <span class="hljs-number">610017.0</span>, <span class="hljs-string">'CLOSE'</span>: <span class="hljs-number">6.84</span>, <span class="hljs-string">'HIGH'</span>: <span class="hljs-number">6.88</span>, <span class="hljs-string">'OPEN'</span>: <span class="hljs-number">6.76</span>, <span class="hljs-string">'LOW'</span>: <span class="hljs-number">6.63</span>},
+       Target=<span class="hljs-string">'stock:600116'</span>,
+       Time=<span class="hljs-string">'2004-01-02 00:00:00 +0000 UTC'</span>)</span>
+            </code></pre> </li>
+            <li> <p>代码实例: </p>
+      <pre class="code-wrapper "><code class=" hljs python">    <span class="hljs-comment"># -*- coding: utf-8 -*-</span>
+          <span class="hljs-keyword">import</span> os,sys,math
+          sys.path.append(os.getcwd());
+          <span class="hljs-keyword">from</span> client <span class="hljs-keyword">import</span> NexusClient
+          <span class="hljs-keyword">from</span> model <span class="hljs-keyword">import</span> ttypes
+          <span class="hljs-keyword">import</span> matplotlib.pyplot <span class="hljs-keyword">as</span> plt
+          <span class="hljs-keyword">import</span> datetime
+
+          SHORTUP_BUY = <span class="hljs-number">0</span>
+          LONGUP_SALE = <span class="hljs-number">1</span>
+          NOCONDITION = <span class="hljs-number">2</span>
+          UP_LIMIT = <span class="hljs-number">0.1</span>
+          DOWN_LIMIT = <span class="hljs-number">0.1</span>
+
+          <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SingleTarget</span>:</span>
+          <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
+          self.slippage = <span class="hljs-number">0.0</span>
+          self.commission = <span class="hljs-number">0.0</span>
+          self.bet_amount = <span class="hljs-number">10000</span>
+          self.sale_buy_Actions = []
+          self.portfolio_Value = []<span class="hljs-comment">#[(date,value)]</span>
+          self.nc = NexusClient()
+          self.config = ttypes.TradeConfig()
+          self.RunInfo={<span class="hljs-string">&quot;pre_Short&quot;</span>:<span class="hljs-number">0.0</span>,<span class="hljs-string">&quot;pre_Long&quot;</span>:<span class="hljs-number">0.0</span>,<span class="hljs-string">&quot;index&quot;</span>:<span class="hljs-number">0</span>,<span class="hljs-string">&quot;lastClose&quot;</span>:<span class="hljs-number">0</span>,<span class="hljs-string">&quot;Ma_Short&quot;</span>:[],<span class="hljs-string">&quot;Ma_Long&quot;</span>:[]}
+
+          <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__del__</span><span class="hljs-params">(self)</span>:</span>
+          self.nc.close()
+
+          <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">inint_Client_Config</span><span class="hljs-params">(self)</span>:</span>
+          self.config.Tstart = <span class="hljs-string">&quot;2006-01-01&quot;</span>
+          self.config.Tend = <span class="hljs-string">&quot;2009-12-31&quot;</span>
+          self.config.Interval = <span class="hljs-string">&quot;24h&quot;</span>
+          self.config.CashCheck = <span class="hljs-number">0</span>
+          targets = {}
+          targets[<span class="hljs-string">&quot;stock:000001&quot;</span>] = [<span class="hljs-string">&quot;Ma_Short=MA(5,CLOSE)&quot;</span>,<span class="hljs-string">&quot;Ma_Long=MA(10,CLOSE)&quot;</span>]
+          self.config.Targets = targets
+          self.config.AccountInitials = [<span class="hljs-number">200000.0</span>]
+          self.config.AccountTypes = [<span class="hljs-string">&quot;stock&quot;</span>]
+          self.nc.regist(<span class="hljs-string">'localhost'</span>, <span class="hljs-number">9090</span>, self.config)
+
+          <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">run</span><span class="hljs-params">(self)</span>:</span>
+          self.nc.run(self.dataTick,self.timeTick)
+
+          <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dataTick</span><span class="hljs-params">(self,tick)</span>:</span>
+          <span class="hljs-keyword">return</span> []
+
+          <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">timeTick</span><span class="hljs-params">(self,ticks)</span>:</span>
+          <span class="hljs-keyword">if</span> len(ticks) &gt; <span class="hljs-number">0</span>:
+          self.sale_buy_Actions = []
+          timeStamp = ticks[<span class="hljs-number">0</span>].Time
+          ticks[<span class="hljs-number">0</span>].Time = datetime.datetime.utcfromtimestamp(timeStamp)
+          self.handle_data(ticks)
+          <span class="hljs-keyword">return</span> self.sale_buy_Actions
+
+          <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">handle_data</span><span class="hljs-params">(self,data)</span>:</span>
+          self.strategy_AvgCross(data)
+          self.portfolio_Value.append((data[<span class="hljs-number">0</span>].Time,self.nc.profit(<span class="hljs-string">'stock'</span>)+sum(self.config.AccountInitials)))
+
+          <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getHoldInfo</span><span class="hljs-params">(self,stock)</span>:</span>
+          t_current_hold = self.nc.Positions(<span class="hljs-string">'stock'</span>)<span class="hljs-comment">#In here, return the {'600195': 20000, '000682': 160000}</span>
+          <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> t_current_hold.keys():
+          <span class="hljs-keyword">if</span> t_current_hold[item] != <span class="hljs-number">0</span>:
+          t_current_hold[<span class="hljs-string">'stock:'</span>+item] = t_current_hold[item]
+          <span class="hljs-keyword">del</span> t_current_hold[item]
+          <span class="hljs-keyword">if</span> stock <span class="hljs-keyword">in</span> t_current_hold.keys():
+          <span class="hljs-keyword">return</span> t_current_hold[stock]
+          <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>
+
+          <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">strategy_AvgCross</span><span class="hljs-params">(self,data)</span>:</span>
+          stock = data[<span class="hljs-number">0</span>].Target
+          cur_Price = data[<span class="hljs-number">0</span>].Data[<span class="hljs-string">&quot;CLOSE&quot;</span>]
+          cur_Short = data[<span class="hljs-number">0</span>].Data[<span class="hljs-string">&quot;Ma_Short&quot;</span>]
+          cur_Long = data[<span class="hljs-number">0</span>].Data[<span class="hljs-string">&quot;Ma_Long&quot;</span>]
+
+          self.RunInfo[<span class="hljs-string">&quot;Ma_Short&quot;</span>].append(cur_Short)
+          self.RunInfo[<span class="hljs-string">&quot;Ma_Long&quot;</span>].append(cur_Long)
+
+          <span class="hljs-keyword">if</span> self.RunInfo[<span class="hljs-string">&quot;index&quot;</span>] != <span class="hljs-number">0</span>:
+          flag,condition = self.getCrossInfo(cur_Short,cur_Long)
+          <span class="hljs-keyword">if</span> flag == <span class="hljs-keyword">True</span>:
+          <span class="hljs-keyword">print</span> flag,condition
+          <span class="hljs-keyword">if</span> condition == SHORTUP_BUY:
+          buy_Volume = math.floor(self.bet_amount/cur_Price/<span class="hljs-number">100</span>)*<span class="hljs-number">100</span>
+          self.sale_buy_Actions.append(ttypes.Action(stock,buy_Volume))
+          <span class="hljs-keyword">print</span> <span class="hljs-string">&quot;Buy&quot;</span>
+          <span class="hljs-keyword">else</span>:
+          <span class="hljs-keyword">pass</span>
+
+          <span class="hljs-keyword">if</span> condition == LONGUP_SALE:
+          hold_Volume=self.getHoldInfo(stock)
+          <span class="hljs-keyword">if</span> hold_Volume != <span class="hljs-number">0</span>:
+          self.sale_buy_Actions.append(ttypes.Action(stock,-<span class="hljs-number">1.0</span>*hold_Volume))
+          <span class="hljs-keyword">print</span> <span class="hljs-string">&quot;Sale&quot;</span>
+          <span class="hljs-keyword">else</span>:
+          <span class="hljs-keyword">pass</span>
+          self.RunInfo[<span class="hljs-string">&quot;pre_Short&quot;</span>] = cur_Short
+          self.RunInfo[<span class="hljs-string">&quot;pre_Long&quot;</span>] = cur_Long
+          self.RunInfo[<span class="hljs-string">&quot;index&quot;</span>] = self.RunInfo[<span class="hljs-string">&quot;index&quot;</span>] + <span class="hljs-number">1</span>
+
+          <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">getCrossInfo</span><span class="hljs-params">(self,cur_Short,cur_Long)</span>:</span>
+          <span class="hljs-comment">#print self.RunInfo[&quot;pre_Long&quot;] , self.RunInfo[&quot;pre_Short&quot;], cur_Short, cur_Long</span>
+
+          <span class="hljs-keyword">if</span> self.RunInfo[<span class="hljs-string">&quot;pre_Long&quot;</span>] &gt; self.RunInfo[<span class="hljs-string">&quot;pre_Short&quot;</span>] <span class="hljs-keyword">and</span> cur_Short &gt; cur_Long:
+          <span class="hljs-keyword">print</span> <span class="hljs-string">&quot;SHORT UP !!!!&quot;</span>
+          <span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span>,SHORTUP_BUY
+
+          <span class="hljs-keyword">if</span> self.RunInfo[<span class="hljs-string">&quot;pre_Long&quot;</span>] &lt; self.RunInfo[<span class="hljs-string">&quot;pre_Short&quot;</span>] <span class="hljs-keyword">and</span> cur_Short &lt; cur_Long:
+          <span class="hljs-keyword">print</span> <span class="hljs-string">&quot;Long UP !!!!&quot;</span>
+          <span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span>,LONGUP_SALE
+
+          <span class="hljs-keyword">return</span> <span class="hljs-keyword">False</span>,NOCONDITION
+
+          <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">checkLimitUp</span><span class="hljs-params">(self,price)</span>:</span>
+          <span class="hljs-keyword">if</span> abs(price - self.RunInfo[<span class="hljs-string">&quot;lastClose&quot;</span>])/self.RunInfo[<span class="hljs-string">&quot;lastClose&quot;</span>] &gt;= UP_LIMIT:
+          <span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span>
+          <span class="hljs-keyword">return</span> <span class="hljs-keyword">False</span>
+
+          <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">checkLimitDown</span><span class="hljs-params">(self,price)</span>:</span>
+          <span class="hljs-keyword">if</span> abs(price - self.RunInfo[<span class="hljs-string">&quot;lastClose&quot;</span>])/self.RunInfo[<span class="hljs-string">&quot;lastClose&quot;</span>] &gt;= DOWN_LIMIT:
+          <span class="hljs-keyword">return</span> <span class="hljs-keyword">True</span>
+          <span class="hljs-keyword">return</span> <span class="hljs-keyword">False</span>
+
+          <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">analyse</span><span class="hljs-params">(self)</span>:</span>
+          x = []
+          <span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> self.portfolio_Value:
+          x.append(item[<span class="hljs-number">1</span>])
+          plt.plot(x)
+          <span class="hljs-comment">#plt.plot(self.RunInfo[&quot;Ma_Short&quot;])</span>
+          <span class="hljs-comment">#print self.RunInfo[&quot;Ma_Short&quot;]</span>
+          <span class="hljs-comment">#plt.plot(self.RunInfo[&quot;Ma_Long&quot;])</span>
+          plt.show()
+      </code></pre>
+            </li>
+        </ol>
+    </div>
+</div>

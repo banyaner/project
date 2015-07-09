@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="魔力 GMAT" />
+	<meta name="robots" content="all" />
+	<meta name="Copyright" content="魔力 GMAT" />
+	<meta name="Description" content="魔力 GMAT" />
+	<meta name="Keywords" content="魔力 GMAT" />
+	<title>魔力 GMAT</title>
+    <link href="style/reset.css" type="text/css" rel="stylesheet" />
+	<link href="style/global.css" type="text/css" rel="stylesheet" />
+	<link href="style/nx_start.css" type="text/css" rel="stylesheet" />
+     <style type="text/css">
+    @media (max-width:950px){
+    #boxOut{
+        width: 950px!important
+        }
+        .subMain{ width: 950px!important}
+}
+</style>
+</head>
+
+<body>
+	<div id="boxOut">
+		<div class="subTop">
+        	<div class="subTopIn">
+        		<div class="subLogo">
+                	<div class="sLogo"><a class="sty" href="#"></a></div>
+                    <dl class="sMenu">
+                    	<dt> </dt>
+                    	<dd class="study"><a class="subSty" href="#">考研英语</a></dd>
+                   		<dd class="study"><a class="subSty" href="#">GMAT语法</a></dd>
+                    </dl>
+                </div>
+                <div class="subMenu">
+                	<ul>
+                    	<li class="current"><a href="#">逆袭模式</a></li>
+                        <li><a href="#">学霸模式</a></li>
+                        <li><a href="#">学神模式</a></li>
+                        <li><a href="#">报告与强化</a></li>
+                    </ul>
+                </div>
+                <div class="myMenu">
+                	<div class="myMenuHum"><a class="mySt" href="#">Renwei</a></div>
+                    <dl class="syMenu" style="width:12%">
+                    	<dt><a class="myStSub" href="#">Renwei</a></dt>
+                    	<dd class="myMuLink"><a class="subSty" href="gr_zx.html">个人中心</a></dd>
+                   		<dd class="myMuLink"><a class="subStyQu" href="home.html">退出</a></dd>
+                    </dl>
+                </div>
+        	</div>
+        </div>
+        <div class="subMain">
+        	<div class="subMainIn">
+            	<div class="sx_start">
+            		<h2>小伙伴们，快快行动起来吧！</h2>
+                	<div class="nextBtn"><a href="nx_txxz.html">练 习</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+		<div id="footerSub">
+			<div class="footerSubWor">
+				<span><a href="#">关于我们</a></span>
+				<span><a href="#">官方微博</a></span>
+				<span>魔力学院版权所有&nbsp;&nbsp;&nbsp;2013-2014</span>
+				<span>京icp 备13003668号－3</span>
+			</div>
+		</div>
+    <div class="leftPopup">
+        <div class="sPo">
+            <span class="sptit">总<br/>成<br/>绩<br/>60分</span>
+            <div class="spchir" style="display:none">
+                <ul>
+                    <li><a href="#"><b>完形填空：15分</b><br>做题数量：300 <br>正确率：50%</a></li>
+                    <li><a href="#"><b>阅读理解：15分</b><br>做题数量：300 <br>正确率：50%</a></a></li>
+                    <li><a href="#"><b>新形题：7分</b><br>做题数量：300 <br>正确率：50%</a></a></li>
+                    <li><a href="#"><b>翻译：8分</b><br>做题数量：300 <br>正确率：50%</a></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="scripts/jquery-1.8.2.min.js" type="text/javascript"> </script>
+    <script type="text/javascript" src="scripts/menu.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $('.ansList2One').on('click',function(){
+                var index = $('.ansList2One').index(this);
+                if(!$(this).hasClass('.ansListBg')){
+                    $('.ansList2One').removeClass('ansListBg');
+                    $(this).addClass('ansListBg');
+                    $('.ansList2One').find('.ansList2OneL').removeClass('ansListHover');
+                    $(this).find('.ansList2OneL').addClass('ansListHover');
+                }
+            });
+
+            $('.sptit,.spchir').on('mouseenter',function(){
+                
+                var index = 0;
+                if($(this).hasClass('sptit')){
+                     index= $('.sptit').index(this);
+                    $(this).siblings('.spchir').show();
+                    $('.spchir').not($('.spchir')[index]).hide();
+                }else{
+                    index = $('.spchir').index(this);
+                }
+                $('.sptit').removeClass('sptHover').eq(index).addClass('sptHover');
+            });
+            $('.leftPopup').on('mouseleave',function(){
+                $('.spchir').hide();
+                $('.sptit').removeClass('sptHover');
+            });
+
+            var loadHeight = $(window).height() / 3 ;
+            $('.leftPopup').css('top', loadHeight+'px');
+
+            showScroll();
+            function showScroll(){
+                $(window).scroll( function() {
+                    var scrollValue=$(window).scrollTop(),
+                        winHeight = $(window).height();
+
+                    var totalScroll = scrollValue + (winHeight / 3),
+                        reportSroll = 100 + scrollValue;
+
+                    //console.log(scrollValue,winHeight);
+                    if(scrollValue>0){
+                        $('.leftPopup').show().stop().animate({top:totalScroll},'slow');
+                        //$('.reportWin').stop().animate({top:reportSroll},'slow');
+                    }
+                } );
+                $('.leftPopup').click(function(){
+                    $("html,body").animate({scrollTop:0},200);
+                }); 
+            }
+
+            $('#submit').on('click',function(){
+                $('.reportWin').show();
+                $('.mask').show();
+            })
+
+            $('.logClose a').on('click',function(){
+                $('.reportWin').hide();
+                $('.mask').hide();
+            });
+
+
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+.top-row {
+    min-height: 100px;
+    display: none; /*init as nothing*/
+}
+
+.Panel {
+    border-width: 1px;
+    border-color: orange;
+}
+
+#Intro {
+    position: relative;
+}
+
+#Intro #ControlButtons {
+    height: 40px;
+    bottom: 0px;
+    width: 100%;
+    position: absolute;
+}
+
+#StrategyParam {
+    border-left-width: 2px;
+    border-left-color: orange;
+    border-left-style: solid;
+}
+
+.panel#Task {
+    display: none; /*init as nothing*/
+    position: relative;
+    min-height:500px;
+}
+
+.Panel#Task #List {
+}
+
+.Panel#Task #Detail {
+    overflow: scroll;
+    display: none; /*init as nothing*/
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    width: 750px;
+    padding: 20px;
+    background-color: white;
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-left-color: orange;
+}
+
+.Panel#Task #List tbody tr:hover {
+    text-decoration:underline;
+}
+.Panel#Task #List tbody tr.selected {
+    background-color: orange;
+    color: white;
+}

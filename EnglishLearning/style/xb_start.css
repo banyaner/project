@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+/**
+* 魔力GMAT 样式
+* Author: Yejj
+* Last Changed by Yejj
+* Last Update : 2014-10-02
+*/
+
+.sx_start{padding:115px 0 0 0; text-align:center;color:#777;font-family:"微软雅黑"}
+.sx_start h2{font: normal 29px/40px "微软雅黑";height:40px;display:inline-block;}
+.sx_start h2 span{color:#6fc8c8;}
+.sx_start_chose{width:400px;height:60px;margin:90px auto;}
+
+.subMainIn{width:920px;margin:0 auto;padding:25px 0 25px 0;}
+.subOne{width:920px;margin:0 auto;padding:80px 0 0 0;}
+.subOne dt{width:170px;height:222px;display:inline-block;}
+.subOne dd{width:170px;height:222px;display:inline-block;margin-left:30px; overflow:hidden;}
+.subOneLink{width:164px;height:196px;display:block;text-decoration:none;border:3px solid #29b6f6;border-radius:5px;}
+.subOneLink:hover *{text-decoration: none;}
+.subOneLink:hover,.current a{background:rgb(245, 246, 248) 0 0 no-repeat;}
+.subOneImg{width:170px;height:80px;padding:20px 0 0 0;}
+
+.subOneLink ul{float: left;width: 170px;text-align: center;padding-top: 10px;color: #a3abbe;font-family: microsoft Yahei;}
+.subOneLink li{line-height: 25px;}
+.subOneLink strong{font-size: 18px;color: #38b7ea;line-height: 30px;}
+.subX,.subXx,.subXxx,.subXxxx,.subXxxxx{height: 16px;line-height: 16px;background-image:url(../images/star.png);background-repeat: no-repeat;}
+.subX{background-position: center top;}
+.subXx{background-position: center -16px;}
+.subXxx{background-position: center -32px;}
+.subXxxx{background-position: center -48px;}
+.subXxxxx{background-position: center -64px;}
+
+.subOneIco{width:68px;height:68px;margin:0 auto;width:164px;height:196px;}
+
+.wx{width:68px;height:68px;background:url(../images/wx.png) 0 0 no-repeat;}
+.yd{width:68px;height:68px;background:url(../images/yd.png) 0 0 no-repeat;}
+.cn{width:68px;height:68px;background:url(../images/cn.png) 0 0 no-repeat;}
+.xt{width:68px;height:68px;background:url(../images/xt.png) 0 0 no-repeat;}
+
+.lock{background:url(../images/lock_bg.png) 0 0 no-repeat;width:164px;height:196px;position:relative;top:-199px;margin:0 auto; text-align:center;}
+.lock p{color:#FFF;font:normal 18px/30px "微软雅黑";padding-top:120px;}
+.lock p span{font-size:23px;}

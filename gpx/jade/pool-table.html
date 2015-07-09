@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="solidwid">
+        <div class="border">
+            <div class="subtit">
+                <span>证券</span>
+                <span>期货</span>
+                <form class="navbar-form navbar-right" role="search" style="margin-right:0px">
+                    <!-- place this in css -->
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="策略名称/品种/代码">
+                    </div>
+                    <button type="submit" class="btn btn-default">搜索</button>
+                </form>
+            </div>
+        </div>
+        <div>
+            <div class="border">
+                <table class=" table table-hover">
+                    <thead>
+                    <tr>
+                        <th>策略名称</th>
+                        <th>年化收益率</th>
+                        <th>主动收益</th>
+                        <th>D比率</th>
+                        <th>最大回撤</th>
+                        <th>平均恢复期</th>
+                        <th>夏普比率</th>
+                    </tr>
+                    </thead>
+                    <tbody id="strategies">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="pagination" class="pagination"style="text-align:center"></div><!-- 显示分页 -->
+    </div>
+</div>

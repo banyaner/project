@@ -1,0 +1,225 @@
+<div class="modal fade" id="modal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    修改策略
+                </h4>
+            </div>
+            <div class="modal-body">
+                <div id="form2">
+                    <div class="form-group">
+                        <label for="strategytit" class="col-sm-2 control-label">策略金额：</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="t-cash">
+                        </div>
+                        <label class="control-label">元</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="type" class="col-sm-2 control-label">可否透支：</label>
+                        <div class="input-group col-sm-4">
+                            <span class="input-group-addon">
+                                <input type="radio" name="cash_check" value="false" disabled="disabled">
+                            </span>
+                            <button class="form-control btn btn-default" >是</button>
+                            <span class="input-group-addon">
+                                <input type="radio" name="cash_check" value="true" checked="checked">
+                            </span>
+                            <button class="form-control btn btn-default" disabled="">否</button>
+                        </div>
+                    </div>
+                    <div class="form-group timecheck">
+                        <label for="type" class="col-sm-2 control-label">起止时间：</label>
+                        <div class="input-group col-sm-9">
+                            <input id="begintime" class="form-control" type="text" placeholder="2012-01-01">
+                            <span class="spanwrd">至</span>
+                            <input class="form-control" id="endtime" type="text" placeholder="2014-01-01">
+                        </div>
+                    </div>
+                    <!--<div class="form-group">-->
+                        <!--<label class="col-sm-2 control-label">FITNESS：</label>-->
+                        <!--<div class="col-sm-8">-->
+                            <!--<div class="btn-group dropdown">-->
+                                <!--<input id="fitness" type="text" class="btn btn-default form-controll" placeholder="请选择FITNESS">-->
+                                <!--<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="  height: 34px">-->
+                                    <!--<span class="caret"></span>-->
+                                    <!--<span class="sr-only">Toggle Dropdown</span>-->
+                                <!--</button>-->
+                                <!--<ul id="fitnesstype" class="dropdown-menu  single" role="menu">-->
+                                    <!--<li name="TrendStrategy">return</li>-->
+                                    <!--<li name="CrossStrategy">return</li>-->
+
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">标的：</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="target" placeholder="请输入6位股票代码，如000001">
+                            <ul id="hintbox">
+                                <li><span>000001</span>
+                                    <span>:&nbsp;&nbsp;</span>
+                                    <span>上证指数</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-1">
+                            <input type="button" class="btn btn-default form-control aaa" id="add" value="添加">
+                        </div>
+
+                        <div class="col-sm-8">
+                            <select id="targets" class="form-control" multiple></select>
+                        </div>
+
+                        <div class="col-sm-1">
+                            <input type="button" class="btn btn-default form-control aaa" id="del1" value="删除">
+                        </div>
+                        <div class="col-sm-1  col-sm-offset-10">
+                            <input type="button" class="btn btn-default form-control aaa" id="empty1" value="清空">
+                        </div>
+                    </div>
+                    <!--<div class="form-group" id="genepara">-->
+                        <!--<label class="col-sm-2 control-label">遗传参数：</label>-->
+                        <!--<div class="col-sm-8">-->
+                            <!--<label class="control-label"><span id="para" class="info">点击展开遗传参数设置</span>&nbsp;&nbsp;请注意：一般情况下，无需修改相关遗传参数。</label>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="form-group">
+                        <div id="paracontent" class="col-sm-8 hidden">
+                            <label>遗传代数:</label>
+                            <input type="text" placeholder="30" id="iteration">
+                            <label>种群大小:</label>
+                            <input type="text" placeholder="200" id="population">
+                            <label>精英群大小:</label>
+                            <input type="text" placeholder="20" id="elite">
+                            <br>&nbsp;&nbsp;&nbsp;
+                            <label>变异率:</label>
+                            <input type="text" placeholder="0.2" id="mutation">&nbsp;&nbsp;&nbsp;
+                            <label>杂交率:</label>
+                            <input type="text" placeholder="0.3" id="crossover">
+                            <label>结果大小:</label>
+                            <input type="text" placeholder="1" id="t-size">
+                        </div>
+                    </div>
+                    <!--<div class="form-group">-->
+                        <!--<div class=" col-sm-offset-5" style="margin-left:434px">-->
+                            <!--<input id="submitstrategy" type="button" class="btn btn-default" value="生成策略">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">关闭
+                </button>
+                <button type="button" class="btn btn-primary hidden" id="submit-online">确定</button>
+                <button type="button" class="btn btn-primary hidden" id="submit-backtest">
+                    确定
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!--<div class="modal fade" id="modal-backtest" tabindex="-1" role="dialog"-->
+     <!--aria-labelledby="myModalLabel" aria-hidden="true">-->
+    <!--<div class="modal-dialog">-->
+        <!--<div class="modal-content">-->
+            <!--<div class="modal-header">-->
+                <!--<button type="button" class="close" data-dismiss="modal"-->
+                        <!--aria-hidden="true">×-->
+                <!--</button>-->
+                <!--<h4 class="modal-title" id="myModalLabel">-->
+                    <!--回测参数设置-->
+                <!--</h4>-->
+            <!--</div>-->
+            <!--<div class="modal-body">-->
+                <!--<div id="form2">-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="strategytit" class="col-sm-2 control-label">策略金额：</label>-->
+                        <!--<div class="col-sm-3">-->
+                            <!--<input type="text" class="form-control" id="t-cash">-->
+                        <!--</div>-->
+                        <!--<label class="control-label">元</label>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="type" class="col-sm-2 control-label">可否透支：</label>-->
+                        <!--<div class="input-group col-sm-4">-->
+                                <!--<span class="input-group-addon">-->
+                    <!--<input type="radio" name="cash_check" value="false" >-->
+                  <!--</span>-->
+                            <!--<button class="form-control btn btn-default" disabled="">是</button>-->
+                                <!--<span class="input-group-addon">-->
+                    <!--<input type="radio" name="cash_check" value="true" checked="checked">-->
+                  <!--</span>-->
+                            <!--<button class="form-control btn btn-default" disabled="">否</button>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="type" class="col-sm-2 control-label">起止时间：</label>-->
+                        <!--<div class="input-group col-sm-9">-->
+                            <!--<input id="begintime" class="form-control" type="text" placeholder="2012-01-01">-->
+                            <!--<span class="spanwrd">至</span>-->
+                            <!--<input class="form-control" id="endtime" type="text" placeholder="2014-01-01">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;<div class="form-group">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<label class="col-sm-2 control-label">FITNESS：</label>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="col-sm-8">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="btn-group dropdown">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<input id="fitness" type="text" class="btn btn-default form-controll" placeholder="请选择FITNESS">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" style="  height: 34px">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="caret"></span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class="sr-only">Toggle Dropdown</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</button>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<ul id="fitnesstype" class="dropdown-menu  single" role="menu">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<li name="TrendStrategy">return</li>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<li name="CrossStrategy">return</li>&ndash;&gt;-->
+
+                    <!--&lt;!&ndash;</ul>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--<div class="form-group">-->
+                        <!--<label class="col-sm-2 control-label">标的：</label>-->
+                        <!--<div class="col-sm-8">-->
+                            <!--<input type="text" class="form-control" id="target" placeholder="请输入6位股票代码，如000001">-->
+                            <!--<ul id="hintbox">-->
+                                <!--<li><span>000001</span>-->
+                                    <!--<span>:&nbsp;&nbsp;</span>-->
+                                    <!--<span>上证指数</span>-->
+                                <!--</li>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                        <!--<div class="col-sm-1">-->
+                            <!--<input type="button" class="btn btn-default form-control aaa" id="add" value="添加">-->
+                        <!--</div>-->
+
+                        <!--<div class="col-sm-8">-->
+                            <!--<select id="targets" class="form-control" multiple></select>-->
+                        <!--</div>-->
+
+                        <!--<div class="col-sm-1">-->
+                            <!--<input type="button" class="btn btn-default form-control aaa" id="del1" value="删除">-->
+                        <!--</div>-->
+                        <!--<div class="col-sm-1  col-sm-offset-10">-->
+                            <!--<input type="button" class="btn btn-default form-control aaa" id="empty1" value="清空">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="modal-footer">-->
+                <!--<button type="button" class="btn btn-default"-->
+                        <!--data-dismiss="modal">关闭-->
+                <!--</button>-->
+                <!--<button type="button" class="btn btn-primary" id="submit-backtest">-->
+                    <!--提交更改-->
+                <!--</button>-->
+            <!--</div>-->
+        <!--</div>&lt;!&ndash; /.modal-content &ndash;&gt;-->
+    <!--</div>&lt;!&ndash; /.modal-dialog &ndash;&gt;-->
+<!--</div>-->

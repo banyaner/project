@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+/**
+* 魔力GMAT 样式
+* Author: Yejj
+* Last Changed by Yejj
+* Last Update : 2014-10-02
+*/
+
+.sx_start{padding:215px 0 0 0; text-align:center;color:#777;font-family:"微软雅黑"}
+.sx_start h2{font: normal 29px/40px "微软雅黑";height:40px;display:inline-block;}
+.sx_start h2 span{color:#29b6f6;}
+.sx_start_chose{width:420px;height:60px;margin:90px auto;}
+.choseSec{float:left;height:60px;width:195px;}
+.slecBg{width:187px;height:56px;border:2px solid #29b6f6;border-radius:5px;font: normal 20px/56px "微软雅黑"; cursor:pointer;}
+.slecBg h3{font: normal 20px/56px "微软雅黑";float:left; text-indent:20px;}
+.slecBg span{width:17px;height:17px;background:url(../images/xs_jt.png) 0 0 no-repeat;display:block;float:right;margin:18px 18px 0 0;}
+.choseBtn{float:right;height:60px;width:195px;overflow:hidden;}
+.choseBtn a{width:187px;height:56px;border:2px solid #29b6f6;border-radius:5px;font: bold 20px/56px "微软雅黑";color:#29b6f6;display:block; text-decoration:none;}
+.xsLock{width:193px;height:60px;background:url(../images/xs_lock.png) 0 0 no-repeat;position:relative;top:-60px;z-index:999;}
+.xssf{background:url(../images/yzm.png) 0 0 no-repeat;}
+.slecSub{width:187px;background:#fff;border:2px solid #6fc8c8;border-top:none;border-radius:5px;display:none;}
+.slecSub li{height:30px;font: normal 16px/30px "微软雅黑"; text-align:left; text-indent:20px;}
+.slecSub li a{color:#777; text-decoration:none;height:30px;width:187px;display:block;}
+.slecSub li a:hover{color:#6fc8c8; text-decoration:underline;}
+
+
+
+.mask{width:100%;height: 990px;background: #000;opacity: 0.2;filter:Alpha(opacity=20);position: absolute;left:0;top:0;display:none;}
+.loginWin{width:766px;height:358px;background:#99bbbd;position:absolute;left:20%;top:130px;}
+.loginWinIn{width:748px;height:340x;background:#fff;}

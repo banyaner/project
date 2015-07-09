@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+/**
+* 魔力GMAT 样式
+* Author: Yejj
+* Last Changed by Yejj
+* Last Update : 2014-10-02
+*/
+
+.sx_start{padding:115px 0 0 0; text-align:center;color:#777;font-family:"微软雅黑"}
+.sx_start h2{font: normal 29px/40px "微软雅黑";height:40px;display:inline-block;}
+.sx_start h2 span{color:#6fc8c8;}
+.sx_start_chose{width:400px;height:60px;margin:90px auto;}
+
+.subMainIn{width:920px;margin:0 auto;padding:25px 0 25px 0;}
+.subOne{width:920px;margin:0 auto;padding:80px 0 0 0;}
+.subOne dt{width:170px;height:222px;display:inline-block;}
+.subOne dd{width:170px;height:222px;display:inline-block;margin-left:30px;}
+.subOneLink{width:164px;height:196px;display:block;text-decoration:none;border:3px solid #6fc8c8;border-radius:5px;}
+.subOneLink:hover *{text-decoration: none;}
+.subOneLink:hover,.current a{background:url(../images/one_bg.gif) 0 0 no-repeat;}
+.subOneImg{width:170px;height:80px;padding:20px 0 0 0;}
+
+.subOneLink ul{float: left;width: 170px;text-align: center;padding-top: 10px;color: #a3abbe;font-family: microsoft Yahei;}
+.subOneLink li{line-height: 25px;}
+.subOneLink strong{font-size: 18px;color: #38b7ea;line-height: 30px;}
+.subX,.subXx,.subXxx,.subXxxx,.subXxxxx{height: 16px;line-height: 16px;background-image:url(../images/star.png);background-repeat: no-repeat;}
+.subX{background-position: center top;}
+.subXx{background-position: center -16px;}
+.subXxx{background-position: center -32px;}
+.subXxxx{background-position: center -48px;}
+.subXxxxx{background-position: center -64px;}
+
+.subOneIco{width:68px;height:68px;margin:0 auto;width:164px;height:196px;}
+
+.wx{width:68px;height:68px;background:url(../images/wx.png) 0 0 no-repeat;}
+.yd{width:68px;height:68px;background:url(../images/yd.png) 0 0 no-repeat;}
+.cn{width:68px;height:68px;background:url(../images/cn.png) 0 0 no-repeat;}
+.xt{width:68px;height:68px;background:url(../images/xt.png) 0 0 no-repeat;}
+
+.lock{background:url(../images/lock_bg.png) 0 0 no-repeat;width:164px;height:196px;position:relative;top:-199px;margin:0 auto;}
+
+.nextBtn{height:46px;width:161px;padding:70px 0 50px 0;margin:0 auto;}
+.nextBtn a{width:161px;height:46px;border-radius:2px;font-size:23px;font-family:"微软雅黑"; display:block;background:#29b6f6;color:#fff; text-align:center; text-decoration:none;font: normal 23px/46px "微软雅黑";}
+
+
+
+
+.mask{width:100%;height: 990px;background: #000;opacity: 0.2;filter:Alpha(opacity=20);position: absolute;left:0;top:0;display:none;}
+.loginWin{width:766px;height:358px;background:#99bbbd; position:absolute;left:30%;top:130px; display:none;}
+.lgWinIn{width:748px;height:340px;background:#fff;margin:9px auto 0 auto;}
+.winOff{width:100%;height:20px;}
+.winOff a{width:11px;height:11px;background:url(../images/off.png) 0 0 no-repeat;display:block;float:right;position:relative;top:23px;right:20px;}
+.winTit{width:650px;height:32px;border-bottom:1px solid #f2f5f7;margin:0 auto; text-align:center;font:normal 22px/22px "微软雅黑";color:#2c3e50;}
+.winMainLo{width:650px;height:263px;margin:0 auto;}
+.winMainLoL{width:324px;height:263px;border-right:1px solid #f2f5f7;float:left;}
+.homLogin{width:285px;margin-top:20px;}
+.homLogin dt{width:285px;height:40px;font:normal ;color:#2c3e50;font:normal 14px/40px "微软雅黑";}
+.homLogin dd{width:285px;height:40px;padding:0 0 16px 0;}
+.homLogin dd input:hover{border:1px solid #92d5db;color:2c3e50;}
+.inpUser{width:260px;height:38px;background-color:#fff;border:1px solid #d3d3d3; border-radius:3px;padding:0 10px;font:normal 14px/38px "微软雅黑";color:#d3d3d3;background:url(../images/user.png) 10px center no-repeat;text-indent:20px;}
+.inpPsd{width:260px;height:38px;background-color:#fff;border:1px solid #d3d3d3; border-radius:3px;padding:0 10px;font:normal 14px/38px "微软雅黑";color:#d3d3d3;background:url(../images/psd.png) 10px center no-repeat;text-indent:20px;}
+.linkA{color:#5fc1cb; text-decoration: none;}
+.linkA:hover{ text-decoration:underline;}
+.loginBtn{width:150px;float:right;}
+.regBtn{width:67px;height:33px;background:#5fc1cb; border-radius:2px;border:1px solid #b4e2e7;font:normal 14px/33px "微软雅黑";color:#fff;display:block; text-decoration:none; text-align:center;float:right;}
+
+.winMainLoR{float:right;width:324px;height:263px;}
+.loginTit{width:305px;height:15px;margin:35px auto 0 auto;}
+.thirdBtn{width:195px;height:35px;margin:10px auto 0 auto;}
+.weiboBtn{width:70px;height:35px;background:url(../images/wb.png) 0 0 no-repeat;display:block;float:left;}
+.qqBtn{width:70px;height:35px;background:url(../images/qq.png) 0 0 no-repeat;display:block;float:right;}
+
+.regWin{width:766px;height:408px;background:#99bbbd; position:absolute;left:30%;top:130px;}
+.regWinIn{width:748px;height:390px;background:#fff;margin:9px auto 0 auto;}
+
+.inpMail{width:260px;height:38px;background-color:#fff;border:1px solid #d3d3d3; border-radius:3px;padding:0 10px;font:normal 14px/38px "微软雅黑";color:#d3d3d3;background:url(../images/yx.png) 10px center no-repeat;text-indent:20px;}
+.inpPsdAg{width:260px;height:38px;background-color:#fff;border:1px solid #d3d3d3; border-radius:3px;padding:0 10px;font:normal 14px/38px "微软雅黑";color:#d3d3d3;background:url(../images/qr.png) 10px center no-repeat;text-indent:20px;}
+
+
